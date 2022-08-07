@@ -10,8 +10,14 @@ function Navbar() {
           <img src={ValorantIcon} alt="Icon" />
         </div>
         <div className="brand-name">
-          <h3>Valorant Agents</h3>
+          <h3>Valorant Stats</h3>
         </div>
+      </div>
+      <div className="navbar-content">
+        <a href="#">Home</a>
+        <a href="#">Stats</a>
+        <a href="#">Leaderboard</a>
+        <a href="#">About Me</a>
       </div>
     </div>
   );

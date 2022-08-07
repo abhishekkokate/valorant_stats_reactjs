@@ -5,11 +5,12 @@ import Navbar from "./components/Navbar/Navbar";
 function App() {
   return (
     <div className="App">
+      <div className="background-watermark"></div>
       <Navbar />
-      <header className="App-header">
-        <img src={ValorantIcon} alt="Icon" />
-        <h2>Valorant Agents</h2>
-      </header>
+      <div className="App-header">
+        {/* <img src={ValorantIcon} alt="Icon" />
+        <h2>Valorant Stats</h2> */}
+      </div>
     </div>
   );
 }

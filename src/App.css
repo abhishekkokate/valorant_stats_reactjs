@@ -1,9 +1,23 @@
 .App {
   text-align: center;
+
+  width: 100%;
+  height: 100%;
+}
+
+.background-watermark {
+  background: url("./assets/imgs/background-watermark.jpg") no-repeat center;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.02;
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100%;
   display: flex;
   flex-direction: column;
@@ -12,4 +26,3 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
