@@ -37,11 +37,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
+  gap: 0.5rem;
 }
 
 .navbar-content a {
   display: block;
+  /* height: 100%; */
+  padding: 0.5rem 1rem;
   color: var(--clr-font);
   text-decoration: none;
+  border-radius: 3px;
+}
+
+.navbar-content a:hover {
+  border-bottom: 3px solid red;
 }
