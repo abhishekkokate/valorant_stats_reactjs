@@ -1,3 +1,142 @@
+.leaderboard-container {
+  width: 100%;
+  height: 100%;
+}
+
 .board-nav {
   display: flex;
+  width: 100%;
+  background: var(--clr-main-600);
+  padding: 1rem;
+}
+
+.board-nav .region-dropdown-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.region-dropdown-container select {
+  background: #0003;
+  padding: 1rem 0.5rem;
+  color: #fff;
+  border-radius: var(--border-radius-500);
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.region-dropdown-container select > * {
+  background: var(--clr-main-600);
+  /* border: 1px solid #0002; */
+  outline: none;
+  border: none;
+}
+
+.reload-container {
+  margin: auto;
+  margin-right: 1rem;
+}
+
+.reloading {
+  animation: reloading 1s linear;
+}
+
+@keyframes reloading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(calc(360deg - 45deg));
+  }
+}
+
+.reload-container button {
+  cursor: pointer;
+  background: transparent;
+  color: #fff;
+  font-size: 1.5rem;
+  outline: none;
+  border: none;
+  transform: rotate(-45deg);
+  transition: var(--transition-100);
+}
+
+.reload-container button:hover {
+  transform: rotate(0deg);
+}
+
+.board-pr-container {
+  display: flex;
+  justify-content: center;
+}
+
+.board-pr-1-card {
+  display: flex;
+  width: fit-content;
+  margin: 2rem;
+  padding: 2rem;
+  width: 28rem;
+  background: #23272ece;
+  border-radius: var(--border-radius-900);
+  box-shadow: 2px 2px 16px -1px #fff1;
+}
+
+.board-pr-1-img {
+  max-height: 18rem;
+}
+
+.board-pr-1-container {
+  position: relative;
+  width: 100%;
+  max-width: 15rem;
+  padding: 1rem;
+}
+
+.board-pr-1-container h3 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 3rem;
+  transform: translate(80%, -60%);
+}
+
+.board-pr-1-container svg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: yellow;
+  font-size: 2rem;
+  transform: translate(40%, -60%) rotate(25deg);
+}
+
+.player-name {
+  display: block;
+  margin-top: 2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 1.25rem;
+}
+
+.player-name p {
+  font-size: 0.75rem;
+  color: var(--clr-font-main-100);
+  text-align: left;
+}
+
+.player-name .player-tag {
+  opacity: 0.4;
+}
+
+.board-pr-1-card-detail p {
+  display: inline-block;
+  /* opacity: 0.4; */
+  font-size: 0.75rem;
+  color: var(--clr-font-main-100);
+  text-align: left;
+  margin-top: 1rem;
+}
+
+.board-pr-1-card-detail p span {
+  opacity: 1;
 }

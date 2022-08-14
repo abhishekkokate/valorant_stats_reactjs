@@ -1,3 +1,21 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  --clr-main: #282c34;
+  --clr-main-600: #23272e;
+  --clr-main-acent: #ff0000;
+  --clr-font-main-100: #fff7;
+  --clr-font-main: #fff;
+  --border-radius-500: 5px;
+  --border-radius-900: 20px;
+  --transition-100: all 0.3s ease-in-out;
+  --transition-500: all 0.7s ease-out;
+  --transition-900: all 1s ease-out;
+}
+
 .App {
   text-align: center;
   display: flex;
@@ -25,4 +43,21 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.cta-button {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  background: var(--clr-main-acent);
+  transition: var(--transition-100);
+  transform: scale(1);
+  font-weight: 600;
+  border-radius: var(--border-radius-500);
+}
+
+.cta-button:hover,
+.cta-button:focus-within {
+  transform: scale(1.1);
 }

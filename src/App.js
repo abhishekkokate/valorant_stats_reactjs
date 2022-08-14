@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./containers/Home/Home";
 import Leaderboard from "./containers/Leaderboard/Leaderboard";
+import NotFound from "./containers/NotFound/NotFound";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/leaderboard" element={<Leaderboard />} />
+          <Route path="/*" element={<NotFound />} />
         </Routes>
       </Router>
     </div>
