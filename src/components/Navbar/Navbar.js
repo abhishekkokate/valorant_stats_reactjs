@@ -1,4 +1,12 @@
+import {
+  faHome,
+  faInfoCircle,
+  faRankingStar,
+  faUser,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { NavLink } from "react-router-dom";
 import ValorantIcon from "../../assets/icons/valorantIcon.png";
 import "./Navbar.css";
 
@@ -14,10 +22,18 @@ function Navbar() {
         </div>
       </div>
       <div className="navbar-content">
-        <a href="#">Home</a>
-        <a href="#">Stats</a>
-        <a href="#">Leaderboard</a>
-        <a href="#">About Me</a>
+        <NavLink to={"/"}>
+          <FontAwesomeIcon icon={faHome} /> <span>Home</span>
+        </NavLink>
+        <NavLink to={"/stats"}>
+          <FontAwesomeIcon icon={faUser} /> <span>Player Stats</span>
+        </NavLink>
+        <NavLink to={"/leaderboard"}>
+          <FontAwesomeIcon icon={faRankingStar} /> <span>Leaderboard</span>
+        </NavLink>
+        <NavLink to={"/aboutme"}>
+          <FontAwesomeIcon icon={faInfoCircle} /> <span>About Me</span>
+        </NavLink>
       </div>
     </div>
   );
