@@ -21,6 +21,10 @@ const buildBoardPrCard = ({ boardData, rank }) => {
         />
       </div>
       <span className="board-pr-1-container">
+        {/* <img
+          src={`https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/${boardData.players[rank]?.competitiveTier}/largeicon.png`}
+          alt="User Card"
+        /> */}
         <h3 style={{ transform: `scale(${1 - rank / 5})` }}>
           #{boardData.players[rank]?.leaderboardRank}
           <FontAwesomeIcon icon={faCrown} />
