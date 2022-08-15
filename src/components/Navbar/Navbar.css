@@ -53,12 +53,22 @@
 
 .ham-burger-container:hover span,
 .ham-burger-container:focus-within span {
-  width: 70%;
+  width: 80%;
   transition: var(--transition-100);
 }
 
-.shrinked .ham-burger-container span {
-  width: 100% !important;
+.shrinked .ham-burger-container .ham-burger span {
+  left: 0;
+  width: 0% !important;
+}
+
+.shrinked .ham-burger-container .ham-burger::before {
+  width: 70%;
+  transform: rotate(45deg) translate(7px, -4px) !important;
+}
+.shrinked .ham-burger-container .ham-burger::after {
+  width: 70%;
+  transform: rotate(-45deg) translate(7px, 4px) !important;
 }
 
 .ham-burger {
@@ -75,8 +85,9 @@
   position: absolute;
   display: block;
   width: 100%;
-  height: 2px;
+  height: 3px;
   background: #fff;
+  border-radius: 10px;
 }
 
 .ham-burger::before {
@@ -84,7 +95,7 @@
 }
 
 .ham-burger span {
-  width: 50%;
+  width: 60%;
   right: 0;
   top: 50%;
   transform: translate(0, -50%);
