@@ -13,6 +13,11 @@ import "./Navbar.css";
 function Navbar() {
   return (
     <div className="navbar-container">
+      <a href="#" className="ham-burger-container">
+        <div className="ham-burger">
+          <span></span>
+        </div>
+      </a>
       <div className="brand-container">
         <div className="brand-icon">
           <img src={ValorantIcon} alt="Icon" />

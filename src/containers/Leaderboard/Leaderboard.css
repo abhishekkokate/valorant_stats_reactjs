@@ -69,12 +69,13 @@
 .board-pr-container {
   display: flex;
   justify-content: center;
+  margin-top: 2rem;
 }
 
 .board-pr-1-card {
   display: flex;
   width: fit-content;
-  margin: 2rem;
+  margin: 1rem;
   padding: 2rem;
   width: 28rem;
   background: #23272ece;
