@@ -45,7 +45,7 @@
   background: var(--clr-main-600);
   border-radius: 50%;
   padding: 1rem;
-  transform: translate(60%, 100%);
+  transform: translate(50%, 100%);
   transition: var(--transition-100);
   box-shadow: 10px 0px 16px -6px #fff3;
   z-index: -1;
