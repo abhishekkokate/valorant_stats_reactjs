@@ -12,19 +12,53 @@
   box-shadow: 0 0 5px var(--clr-main-600);
   /* display: flex; */
   justify-content: center;
+  z-index: 1000;
+  box-shadow: 0px 0 16px #fff2;
+  transition: var(--transition-100);
+}
+
+.navbar-text {
+  transition: var(--transition-100);
+}
+.shrinked {
+  width: 100px;
+  min-width: 100px;
+}
+
+.shrinked a,
+.shrinked a::before,
+.shrinked a::after {
+  line-height: 1;
+  border-radius: 50% !important;
+}
+
+.shrinked .navbar-text {
+  transition: var(--transition-100);
+  font-size: 0 !important;
 }
 
 .ham-burger-container {
+  display: block;
   position: absolute;
   top: 1.5rem;
   right: 0;
+  background: var(--clr-main-600);
+  border-radius: 50%;
+  padding: 1rem;
+  transform: translate(60%, 100%);
   transition: var(--transition-100);
+  box-shadow: 10px 0px 16px -6px #fff3;
+  z-index: -1;
 }
 
 .ham-burger-container:hover span,
 .ham-burger-container:focus-within span {
   width: 70%;
   transition: var(--transition-100);
+}
+
+.shrinked .ham-burger-container span {
+  width: 100% !important;
 }
 
 .ham-burger {
@@ -50,7 +84,7 @@
 }
 
 .ham-burger span {
-  width: 60%;
+  width: 50%;
   right: 0;
   top: 50%;
   transform: translate(0, -50%);
@@ -68,7 +102,7 @@
   align-items: center;
   gap: 1rem;
   margin-right: auto;
-  padding: 0.5rem 1rem;
+  padding: 1.25rem 1rem;
 }
 
 .brand-icon {
@@ -94,8 +128,13 @@
 .navbar-content a {
   text-align: left;
   position: relative;
-  display: block;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  /* gap: 1rem; */
   /* height: 100%; */
+  flex-wrap: nowrap;
   padding: 1rem 1.5rem;
   margin: 1rem 0;
   color: var(--clr-font);
@@ -106,10 +145,13 @@
 
 .navbar-content a svg {
   font-size: 1.25rem;
-  margin: auto;
-  margin-right: 0.5rem;
+  /* margin: auto; */
+  /* margin-right: 0.5rem; */
+  transform: translate(-10%, -10%);
 }
-
+.navbar-content a span {
+  margin-left: 0.5rem;
+}
 .navbar-content a::before {
   content: "";
   height: 0;

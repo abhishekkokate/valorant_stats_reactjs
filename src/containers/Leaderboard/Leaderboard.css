@@ -8,6 +8,7 @@
   width: 100%;
   background: var(--clr-main-600);
   padding: 1rem;
+  padding-left: 4rem;
 }
 
 .board-nav .region-dropdown-container {

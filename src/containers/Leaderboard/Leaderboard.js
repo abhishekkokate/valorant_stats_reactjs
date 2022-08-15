@@ -8,7 +8,9 @@ const buildBoardPrCard = ({ boardData, rank }) => {
   return (
     <div
       className="board-pr-1-card"
-      style={{ transform: `scale(${1 - rank / 10})` }}
+      style={{
+        transform: `scale(${1 - rank / 10})`,
+      }}
     >
       <div className="board-pr-1-img">
         <img
