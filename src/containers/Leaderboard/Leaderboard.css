@@ -87,6 +87,12 @@
   box-shadow: 2px 2px 16px -1px #fff1;
 }
 
+@media screen and (max-width: 768px) {
+  .board-pr-1-card {
+    width: 100% !important;
+  }
+}
+
 .board-pr-1-img {
   max-height: 18rem;
 }

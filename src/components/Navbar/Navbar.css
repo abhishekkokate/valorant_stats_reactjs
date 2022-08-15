@@ -43,9 +43,10 @@
   top: 1.5rem;
   right: 0;
   background: var(--clr-main-600);
-  border-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
   padding: 1rem;
-  transform: translate(50%, 100%);
+  transform: translate(60%, 100%);
   transition: var(--transition-100);
   box-shadow: 10px 0px 16px -6px #fff3;
   z-index: -1;
@@ -198,4 +199,18 @@
   width: 100%;
   border-radius: var(--border-radius-500);
   background-color: rgba(255, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 610px) {
+  .navbar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* transform: translate(-100%, 0); */
+  }
+
+  .navbar-container.shrinked {
+    box-shadow: none;
+    transform: translate(-100%, 0);
+  }
 }
