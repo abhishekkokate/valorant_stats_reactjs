@@ -97,7 +97,7 @@
 
 .board-pr-1-container {
   width: 100%;
-  max-width: 15rem;
+  max-width: 16rem;
   padding: 1rem;
 }
 
@@ -162,5 +162,9 @@
   }
   .board-nav select {
     font-size: 0.8rem;
+  }
+  .board-pr-container {
+    margin: 0.5rem;
+    padding: 0.5rem;
   }
 }
