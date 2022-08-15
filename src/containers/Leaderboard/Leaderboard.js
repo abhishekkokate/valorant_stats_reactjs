@@ -9,7 +9,9 @@ const buildBoardPrCard = ({ boardData, rank }) => {
     <div
       className="board-pr-1-card"
       style={{
-        transform: `scale(${1 - rank / 10})`,
+        // transform: `scale(${1 - rank / 10})`,
+        width: `${28 - rank}rem`,
+        height: `${20 - rank}rem`,
       }}
     >
       <div className="board-pr-1-img">
@@ -19,12 +21,12 @@ const buildBoardPrCard = ({ boardData, rank }) => {
         />
       </div>
       <span className="board-pr-1-container">
-        <h3>
+        <h3 style={{ transform: `scale(${1 - rank / 5})` }}>
           #{boardData.players[rank]?.leaderboardRank}
           <FontAwesomeIcon icon={faCrown} />
         </h3>
         <div className="player-name">
-          <p>Username:</p>
+          {/* <p>Username:</p> */}
           {boardData.players[rank]?.gameName}
           <span className="player-tag">
             #{boardData.players[rank]?.tagLine}

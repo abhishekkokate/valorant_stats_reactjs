@@ -70,10 +70,13 @@
 .board-pr-container {
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  margin: 2rem;
 }
 
 .board-pr-1-card {
+  position: relative;
   display: flex;
   width: fit-content;
   margin: 1rem;
@@ -89,7 +92,6 @@
 }
 
 .board-pr-1-container {
-  position: relative;
   width: 100%;
   max-width: 15rem;
   padding: 1rem;
@@ -98,7 +100,7 @@
 .board-pr-1-container h3 {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 5px;
   font-size: 3rem;
   transform: translate(80%, -60%);
 }
