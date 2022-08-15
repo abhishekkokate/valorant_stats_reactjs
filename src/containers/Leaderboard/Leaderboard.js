@@ -211,6 +211,7 @@ function Leaderboard() {
         <h1>Valorant</h1>
         <h2>Leaderboard</h2>
       </div> */}
+      <h2 className="board-title">Top Players</h2>
       <div className="board-pr-container">
         {buildBoardPrCard({ boardData, rank: 1 })}
         {buildBoardPrCard({ boardData, rank: 2 })}

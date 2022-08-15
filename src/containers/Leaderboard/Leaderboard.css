@@ -10,6 +10,10 @@
   padding: 1rem;
   padding-left: 4rem;
 }
+.board-title {
+  padding: 2rem 0.5rem;
+  padding-bottom: 0.5rem;
+}
 
 .board-nav .region-dropdown-container {
   display: flex;
@@ -87,12 +91,6 @@
   box-shadow: 2px 2px 16px -1px #fff1;
 }
 
-@media screen and (max-width: 768px) {
-  .board-pr-1-card {
-    width: 100% !important;
-  }
-}
-
 .board-pr-1-img {
   max-height: 18rem;
 }
@@ -149,4 +147,20 @@
 
 .board-pr-1-card-detail p span {
   opacity: 1;
+}
+
+@media screen and (max-width: 610px) {
+  .board-nav {
+    padding-left: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .board-pr-1-card {
+    width: 100% !important;
+  }
+  .board-nav select {
+    font-size: 0.8rem;
+  }
 }
