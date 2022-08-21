@@ -139,9 +139,9 @@ function Leaderboard() {
     },
   };
 
-  // useEffect(() => {
-  //   fetchBoardData();
-  // }, [boardRegion]);
+  useEffect(() => {
+    fetchBoardData();
+  }, [boardRegion]);
 
   const fetchBoardData = () => {
     fetch(`https://api.henrikdev.xyz/valorant/v2/leaderboard/${boardRegion}`, {

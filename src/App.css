@@ -11,7 +11,7 @@
   --clr-font-main: #fff;
   --border-radius-500: 5px;
   --border-radius-900: 20px;
-  --transition-100: all 0.3s ease-in-out;
+  --transition-100: all 0.3s ease-out;
   --transition-500: all 0.7s ease-out;
   --transition-900: all 1s ease-out;
 }
