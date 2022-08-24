@@ -32,3 +32,63 @@
   text-align: left;
   width: 80%;
 }
+.board-table-row-container .board-table-player h2,
+.board-table-row-container .board-table-rr h2,
+.board-table-row-container .board-table-wins h2 {
+  font-weight: 400;
+}
+
+.board-table-navigation-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem;
+  gap: 0.25rem;
+  font-size: 1.5rem;
+}
+.board-table-navigation-container .navigator {
+  padding: 0.5rem 0.75rem;
+  background: #0004;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--transition-100);
+}
+
+a.navigator:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+  font-size: 1.75rem;
+  border-radius: var(--border-radius-500) !important;
+  transition: var(--transition-100);
+}
+
+.board-table-navigation-container .navigator:first-child {
+  border-top-left-radius: var(--border-radius-100);
+  border-bottom-left-radius: var(--border-radius-100);
+}
+
+.board-table-navigation-container .navigator:last-child {
+  border-top-right-radius: var(--border-radius-100);
+  border-bottom-right-radius: var(--border-radius-100);
+}
+
+.board-table-navigation-container .navigator input {
+  padding: 0.5rem;
+  max-width: fit-content;
+  width: 10ch;
+  border-radius: var(--border-radius-100);
+  height: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .board-table-container {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .board-table-rank-icon,
+  .board-table-rank-icon h2 img {
+    width: 50px !important;
+  }
+}
