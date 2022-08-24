@@ -1,0 +1,20 @@
+.board-table-row-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  /* background: #0004; */
+  padding: 1rem;
+  border-bottom: 2px solid #0002;
+}
+
+.board-table-row-container:last-child {
+  border: none !important;
+}
+
+.board-table-rank-icon h2 img {
+  max-width: 64px;
+  max-height: 64px;
+  margin: auto;
+}

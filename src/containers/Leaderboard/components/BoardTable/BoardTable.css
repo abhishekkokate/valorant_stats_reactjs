@@ -1,0 +1,34 @@
+.board-table-container {
+  background: #0002;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 2rem;
+  margin: 1rem;
+}
+
+.board-table-title {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  background: #0004;
+  padding: 1rem;
+}
+
+.board-table-rank-no,
+.board-table-rank-icon,
+.board-table-rr,
+.board-table-wins {
+  width: fit-content;
+  width: 10%;
+}
+
+.board-table-rank-icon {
+  max-width: 75px;
+}
+
+.board-table-player {
+  text-align: left;
+  width: 80%;
+}

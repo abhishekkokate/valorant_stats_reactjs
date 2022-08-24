@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightRotate, faCrown } from "@fortawesome/free-solid-svg-icons";
 import "./Leaderboard.css";
+import BoardTable from "./components/BoardTable/BoardTable";
 
 const buildBoardPrCard = ({ boardData, rank }) => {
   rank--;
@@ -29,6 +30,10 @@ const buildBoardPrCard = ({ boardData, rank }) => {
           #{boardData.players[rank]?.leaderboardRank}
           <FontAwesomeIcon icon={faCrown} />
         </h3>
+        <img
+          src={`https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/${boardData?.players[rank]?.competitiveTier}/smallicon.png`}
+          alt=""
+        />
         <div className="player-name">
           {/* <p>Username:</p> */}
           {boardData.players[rank]?.gameName}
@@ -175,16 +180,6 @@ function Leaderboard() {
 
   return (
     <div className="leaderboard-container">
-      {/* {boardData.length
-        ? boardData.map((e, i) => {
-            return (
-              <div key={i}>
-                {i + 1} {e.gameName}
-              </div>
-            );
-          })
-        : "No Data"} */}
-
       <div className="board-nav">
         <div className="region-dropdown-container">
           <p>Region:</p>
@@ -211,18 +206,31 @@ function Leaderboard() {
           </button>
         </div>
       </div>
-      {/* <div className="board-title-container">
+      <div className="leaderboard-container-inner">
+        {/* {boardData.length
+        ? boardData.map((e, i) => {
+            return (
+              <div key={i}>
+                {i + 1} {e.gameName}
+              </div>
+            );
+          })
+        : "No Data"} */}
+
+        {/* <div className="board-title-container">
         <h1>Valorant</h1>
         <h2>Leaderboard</h2>
       </div> */}
-      <h2 className="board-title">Top Players</h2>
-      <div className="board-pr-container">
-        {buildBoardPrCard({ boardData, rank: 1 })}
-        {buildBoardPrCard({ boardData, rank: 2 })}
-        {buildBoardPrCard({ boardData, rank: 3 })}
-      </div>
+        <h2 className="board-title">Top Players</h2>
+        <div className="board-pr-container">
+          {buildBoardPrCard({ boardData, rank: 1 })}
+          {buildBoardPrCard({ boardData, rank: 2 })}
+          {buildBoardPrCard({ boardData, rank: 3 })}
+        </div>
+        
+        <BoardTable players={boardData?.players} />
 
-      {/* {boardData.players.map((e, i) => {
+        {/* {boardData.players.map((e, i) => {
         if (i > 10) return;
         return (
           <div className="board-rest-container" key={i}>
@@ -239,6 +247,7 @@ function Leaderboard() {
           </div>
         );
       })} */}
+      </div>
     </div>
   );
 }
