@@ -97,6 +97,11 @@
   box-shadow: 2px 2px 16px -1px #fff1;
 }
 
+.board-pr-name-container {
+  display: flex;
+  align-items: center;
+}
+
 .board-pr-1-img {
   max-height: 18rem;
 }
@@ -126,7 +131,6 @@
 
 .player-name {
   display: block;
-  margin-top: 2rem;
   font-weight: 600;
   letter-spacing: 1px;
   font-size: 1.25rem;

@@ -15,7 +15,7 @@ function HomeStats() {
       <div className="home-stats-content">
         <h3>Currently only leaderboard is live click below to navigate</h3>
       </div>
-      <Link className="cta-button" to="/">
+      <Link className="cta-button" to="/leaderboard">
         {">"} Leaderboard {"<"}
       </Link>
     </div>
