@@ -159,7 +159,6 @@ function Leaderboard() {
       .then((result) => {
         setBoardData(result);
         boardData.players.length = 10;
-        console.log(boardData.players.length);
       })
       .catch((err) => {
         console.error("Error while getting leaderboard: ", err.message);

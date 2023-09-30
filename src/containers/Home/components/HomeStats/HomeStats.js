@@ -1,5 +1,6 @@
 import React from "react";
 import "./HomeStats.css";
+import { Link } from "react-router-dom";
 
 function HomeStats() {
   return (
@@ -12,8 +13,11 @@ function HomeStats() {
         />
       </div>
       <div className="home-stats-content">
-        
+        <h3>Currently only leaderboard is live click below to navigate</h3>
       </div>
+      <Link className="cta-button" to="/">
+        {">"} Leaderboard {"<"}
+      </Link>
     </div>
   );
 }

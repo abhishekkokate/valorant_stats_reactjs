@@ -1,7 +1,6 @@
 .navbar-container {
   position: relative;
   background: var(--clr-main-600);
-  height: 100vh;
   width: 100%;
   min-width: 250px;
   max-width: 300px;

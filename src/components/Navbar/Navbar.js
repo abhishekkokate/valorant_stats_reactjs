@@ -25,7 +25,7 @@ function Navbar() {
           <span></span>
         </div>
       </a>
-      <div className="brand-container">
+      <a href='/' className="brand-container">
         <div className="brand-icon">
           <img src={ValorantIcon} alt="Icon" />
         </div>
@@ -34,7 +34,7 @@ function Navbar() {
             Valorant Stats
           </h3>
         </div>
-      </div>
+      </a>
       <div className="navbar-content">
         <NavLink to={"/"}>
           <FontAwesomeIcon icon={faHome} />{" "}
