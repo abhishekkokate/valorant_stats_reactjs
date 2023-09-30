@@ -213,24 +213,6 @@ function Leaderboard() {
         </div>
 
         <BoardTable players={boardData?.players} />
-
-        {/* {boardData.players.map((e, i) => {
-        if (i > 10) return;
-        return (
-          <div className="board-rest-container" key={i}>
-            <div className="board-rest-card">
-              <h4>
-                <img
-                  style={{ margin: "0 auto" }}
-                  src={`https://media.valorant-api.com/playercards/${e?.PlayerCardID}/smallart.png`}
-                  alt="Pcard"
-                />
-                {boardData.players[i]?.leaderboardRank} {e.gameName}#{e.tagLine}
-              </h4>
-            </div>
-          </div>
-        );
-      })} */}
       </div>
     </div>
   );
