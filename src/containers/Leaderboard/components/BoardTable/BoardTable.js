@@ -10,11 +10,16 @@ import {
 import BoardTableRow from "../BoardTableRow/BoardTableRow";
 import "./BoardTable.css";
 import { useState } from "react";
+import _ from "lodash";
 
 function BoardTable({ players }) {
   const [currPage, setCurrPage] = useState(1);
   const maxPages = Math.ceil(players?.length / 10);
-  const [filteredPlayers, setFilteredPlayers] = useState([]);
+  const [filteredPlayers, setFilteredPlayers] = useState(
+    players?.filter((e, i) => {
+      return i >= (currPage - 1) * 10 && i < (currPage - 1) * 10 + 10;
+    }) || []
+  );
 
   useEffect(() => {
     setFilteredPlayers(
@@ -45,13 +50,13 @@ function BoardTable({ players }) {
           </div>
         </div>
         {filteredPlayers.map((e, i) => {
-          if (e?.leaderboardRank <= 3) return;
-          return <BoardTableRow player={e} key={i} />;
+          if (e?.leaderboardRank >= 3) {
+            return <BoardTableRow player={e} key={i} />;
+          }
         })}
 
         <div className="board-table-navigation-container">
           <a
-            href="javascript:void(0)"
             className="navigator navigate-first"
             onClick={() => {
               setCurrPage((prev) => {
@@ -62,12 +67,10 @@ function BoardTable({ players }) {
             <FontAwesomeIcon icon={faStepBackward} />
           </a>
           <a
-            href="javascript:void(0)"
             className="navigator navigate-prev"
             onClick={() => {
               setCurrPage((prev) => {
                 if (prev <= 1) prev = 2;
-                console.log(prev);
                 setCurrPage(prev - 1);
               });
             }}
@@ -84,18 +87,12 @@ function BoardTable({ players }) {
               value={currPage}
               onChange={(e) => {
                 let val = e.target.value;
-                if (val > maxPages) {
-                  val = maxPages;
-                } else if (val < 1 || typeof val !== "Number") {
-                  val = 1;
-                }
                 setCurrPage(val);
               }}
             />
             &nbsp;/&nbsp;{maxPages}
           </div>
           <a
-            href="javascript:void(0)"
             className="navigator navigate-next"
             onClick={() => {
               setCurrPage((prev) => {
@@ -107,7 +104,6 @@ function BoardTable({ players }) {
             <FontAwesomeIcon icon={faCaretRight} />
           </a>
           <a
-            href="javascript:void(0)"
             className="navigator navigate-last"
             onClick={() => {
               setCurrPage((prev) => {
