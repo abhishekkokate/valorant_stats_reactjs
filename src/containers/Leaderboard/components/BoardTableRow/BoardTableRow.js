@@ -15,6 +15,11 @@ function BoardTableRow({ player }) {
           />
         </h2>
       </div>
+      <img
+        style={{ margin: "0 auto", height: "60px" }}
+        src={`https://media.valorant-api.com/playercards/${player?.PlayerCardID}/smallart.png`}
+        alt="Player"
+      />
       <div className="board-table-player">
         <h2>
           {player?.gameName}#{player?.tagLine}
