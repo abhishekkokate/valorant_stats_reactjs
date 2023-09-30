@@ -30,21 +30,27 @@ const buildBoardPrCard = ({ boardData, rank }) => {
           #{boardData.players[rank]?.leaderboardRank}
           <FontAwesomeIcon icon={faCrown} />
         </h3>
-        <img
-          src={`https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/${boardData?.players[rank]?.competitiveTier}/smallicon.png`}
-          alt=""
-        />
-        <div className="player-name">
-          {/* <p>Username:</p> */}
-          {boardData.players[rank]?.gameName}
-          <span className="player-tag">
-            #{boardData.players[rank]?.tagLine}
-          </span>
+        <div className="board-pr-name-container">
+          <img
+            src={`https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/${boardData?.players[rank]?.competitiveTier}/smallicon.png`}
+            alt=""
+          />
+          <div className="player-name">
+            {/* <p>Username:</p> */}
+            {boardData.players[rank]?.gameName}
+            <span className="player-tag">
+              #{boardData.players[rank]?.tagLine}
+            </span>
+          </div>
         </div>
-        {/* <div className="board-pr-1-card-detail">
-      <p>Wins:</p>
-      <span>{boardData.players[0].numberOfWins}</span>
-    </div> */}
+        <div className="board-pr-1-card-detail">
+          <p>Wins:</p>
+          <span>{boardData.players[rank].numberOfWins}</span>
+        </div>
+        <div className="board-pr-1-card-detail">
+          <p>RR:</p>
+          <span>{boardData.players[rank].rankedRating}</span>
+        </div>
       </span>
     </div>
   );
@@ -122,27 +128,6 @@ function Leaderboard() {
   });
   const [boardRegion, setRegion] = useState("eu");
   const [reloadingBoard, setReloadingBoard] = useState(false);
-
-  const userData = {
-    status: 200,
-    data: {
-      puuid: "226d1505-9b11-5468-96ef-2b1c85fd38e6",
-      region: "ap",
-      account_level: 334,
-      name: "FW JitboyXD",
-      tag: "uknow",
-      card: {
-        small:
-          "https://media.valorant-api.com/playercards/b55ec859-4533-c751-a1d8-b1bba5c16387/smallart.png",
-        large:
-          "https://media.valorant-api.com/playercards/b55ec859-4533-c751-a1d8-b1bba5c16387/largeart.png",
-        wide: "https://media.valorant-api.com/playercards/b55ec859-4533-c751-a1d8-b1bba5c16387/wideart.png",
-        id: "b55ec859-4533-c751-a1d8-b1bba5c16387",
-      },
-      last_update: "Now",
-      last_update_raw: 1660496492,
-    },
-  };
 
   useEffect(() => {
     fetchBoardData();
@@ -226,7 +211,7 @@ function Leaderboard() {
           {buildBoardPrCard({ boardData, rank: 2 })}
           {buildBoardPrCard({ boardData, rank: 3 })}
         </div>
-        
+
         <BoardTable players={boardData?.players} />
 
         {/* {boardData.players.map((e, i) => {
